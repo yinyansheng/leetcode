@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * https://leetcode-cn.com/problems/two-sum/
  */
-public class L01_tow_sum {
+public class TowSumSolution {
     public static void main(String[] args) {
         int[] ints = twoSum(new int[]{3, 2, 4}, 6);
         System.out.println(JSON.toJSONString(ints));
