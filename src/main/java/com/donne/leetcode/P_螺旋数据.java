@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * https://leetcode-cn.com/problems/spiral-matrix/solution/
  */
-public class SpiralOrderSolution {
+public class P_螺旋数据 {
     public static void main(String[] args) {
         int[][] matrix = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         System.out.println(spiralOrder(matrix));

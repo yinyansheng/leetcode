@@ -3,7 +3,7 @@ package com.donne.leetcode;
 /**
  * https://leetcode-cn.com/problems/ugly-number/
  */
-public class UglySolution {
+public class P_丑数 {
 
     public static void main(String[] args) {
         System.out.println(isUgly(127));

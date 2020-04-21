@@ -6,7 +6,7 @@ import com.donne.leetcode.model.ListNode;
  * https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
  * aa bb
  */
-public class RemoveNthFromEndSolution {
+public class P_链表倒数第N个节点 {
     public static void main(String[] args) {
         ListNode head = initList(5);
         printList(head);

@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  *
  */
-class Solution20 {
+class P_括号匹配 {
 
     public static void main(String[] args) {
         String input = "{[()]}a";

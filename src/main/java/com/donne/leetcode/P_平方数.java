@@ -3,7 +3,7 @@ package com.donne.leetcode;
 /**
  * https://leetcode-cn.com/problems/powx-n/
  */
-public class PowerSolution {
+public class P_平方数 {
     public static void main(String[] args) {
         System.out.println(myPow2(2.00000, -2147483648));
     }

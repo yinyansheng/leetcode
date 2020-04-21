@@ -3,7 +3,7 @@ package com.donne.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ClimbStairsSolution {
+public class P_爬楼梯 {
     public static void main(String[] args) {
         System.out.println(climbStairs(10));
     }
