@@ -2,7 +2,7 @@ package com.donne.offer;
 
 public class P_1_字符串的排列 {
     public static void main(String[] args) {
-        permutation("abcd".toCharArray(), 0, 3);
+        permutation("abc".toCharArray(), 0, 2);
     }
 
 
