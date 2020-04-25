@@ -1,6 +1,6 @@
 package com.donne.leetcode;
 
-public interface P_35_搜索插入位置 {
+public class P_35_搜索插入位置 {
 
     public static void main(String[] args) {
         System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 2));
