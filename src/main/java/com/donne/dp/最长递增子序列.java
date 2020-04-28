@@ -15,8 +15,13 @@ public class 最长递增子序列 {
     }
 
     /**
+     * dp(i) 表示以nums[i]为结尾的最长子序列
+     *
      * i=0 return 1;
-     * dp(i)= max{dp(x)+num[x]<num[x]?1:0} x in {0,i-1}
+     * if(num[x]<num[x]){
+     *     dp(i)= max{dp(x)+1} x in {0,i-1}
+     * }
+     *
      *
      * @param i
      * @param nums
