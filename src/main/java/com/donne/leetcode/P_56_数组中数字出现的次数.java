@@ -31,33 +31,33 @@ public class P_56_数组中数字出现的次数 {
     }
 
     public static int[] singleNumbers2(int[] nums) {
-        //所有数抑或
-        int x = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            x ^= nums[i];
+        //用于将所有的数异或起来
+        int k = 0;
+
+        for(int num: nums) {
+            k ^= num;
         }
 
-        //获取某一位 为1的值
-        //int lowBit = x & (-x);
         //获得k中最低位的1
         int mask = 1;
 
         //mask = k & (-k) 这种方法也可以得到mask，具体原因百度 哈哈哈哈哈
-        while((x & mask) == 0) {
+        while((k & mask) == 0) {
             mask <<= 1;
         }
 
-        //按该位置分成两组 分别全抑或操作，则得到这两个数
-        int[] res = new int[2];
-        for (int i = 0; i < nums.length; i++) {
-            if ((nums[i] & mask) == 0) {
-                res[0] ^= nums[i];
+        int a = 0;
+        int b = 0;
+
+        for(int num: nums) {
+            if((num & mask) == 0) {
+                a ^= num;
             } else {
-                res[1] ^= nums[i];
+                b ^= num;
             }
         }
 
-        return res;
+        return new int[]{a, b};
     }
 
 }
