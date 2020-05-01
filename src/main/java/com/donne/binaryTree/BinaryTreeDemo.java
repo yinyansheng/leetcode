@@ -1,4 +1,4 @@
-package com.donne.bt;
+package com.donne.binaryTree;
 
 import com.donne.leetcode.model.TreeNode;
 
