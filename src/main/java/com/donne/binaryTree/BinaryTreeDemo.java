@@ -3,6 +3,7 @@ package com.donne.binaryTree;
 import com.donne.leetcode.model.TreeNode;
 
 import java.util.ArrayDeque;
+import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -34,7 +35,7 @@ public class BinaryTreeDemo {
     }
 
     private static int maxVal(TreeNode root1) {
-        if(root1==null){
+        if (root1 == null) {
             return Integer.MIN_VALUE;
         }
 
@@ -75,6 +76,16 @@ public class BinaryTreeDemo {
         }
 
         System.out.print(root.val);
+        prefixOrder(root.left);
+        prefixOrder(root.right);
+    }
+
+    private static void prefixOrder(TreeNode root, List<Integer> list) {
+        if (null == root) {
+            return;
+        }
+
+        list.add(root.val);
         prefixOrder(root.left);
         prefixOrder(root.right);
     }
