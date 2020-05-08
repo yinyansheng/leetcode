@@ -27,19 +27,18 @@ public class P_141_环形链表 {
             return false;
         }
 
-        ListNode fastPtr = head;
-        ListNode slowPtr = head;
+        ListNode slow = head;
+        ListNode fast = head;
 
-        while (fastPtr.next != null && slowPtr.next.next != null) {
-            System.out.println(fastPtr.val);
-            fastPtr = fastPtr.next;
-            slowPtr = slowPtr.next.next;
-            if (fastPtr == slowPtr) {
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (fast == slow) {
                 return true;
             }
         }
-
-
+        
         return false;
     }
 }
