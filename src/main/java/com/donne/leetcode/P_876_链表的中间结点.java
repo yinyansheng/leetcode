@@ -2,7 +2,6 @@ package com.donne.leetcode;
 
 import com.donne.leetcode.helper.LinkedListHelper;
 import com.donne.leetcode.model.ListNode;
-import com.sun.tools.javac.util.List;
 
 public class P_876_链表的中间结点 {
     public static void main(String[] args) {
