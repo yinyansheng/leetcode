@@ -1,7 +1,6 @@
 package com.donne.temp;
 
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentSkipListSet;
 
 /**
@@ -11,6 +10,9 @@ import java.util.concurrent.ConcurrentSkipListSet;
 public class T6 {
 
     public static void main(String[] args) {
+        List<Integer> integers = Collections.unmodifiableList(Arrays.asList(1, 2, 3));
+        integers.add(4);
+
         Set<Integer> concurrentSkipListSet = new ConcurrentSkipListSet<>();
         concurrentSkipListSet.add(1);
         concurrentSkipListSet.add(2);
