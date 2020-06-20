@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 public class JvmDemo {
 
     public static void main(String[] args) {
+        T t=new T();
+
         JvmDemo jvmDemo = new JvmDemo();
         int a = 1;
         int b = 2;
