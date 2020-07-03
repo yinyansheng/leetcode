@@ -10,24 +10,27 @@ public class P_面试题01_06_字符串压缩 {
     }
 
     public static String compressString(String S) {
-        char curr = S.charAt(0);
-        int count = 0;
-        StringBuilder sb = new StringBuilder();
-        sb.append(curr);
+        while (true) {
+            char curr = S.charAt(0);
+            int count = 0;
+            StringBuilder sb = new StringBuilder();
+            sb.append(curr);
 
-        for (char c : S.toCharArray()) {
-            if (c == curr) {
-                count++;
-            } else {
-                sb.append(count);
-                sb.append(c);
-                curr = c;
-                count = 1;
+            for (char c : S.toCharArray()) {
+                if (c == curr) {
+                    count++;
+                } else {
+                    sb.append(count);
+                    sb.append(c);
+                    curr = c;
+                    count = 1;
+                }
             }
+            sb.append(count);
         }
-        sb.append(count);
 
-        return sb.length() <= S.length() ? sb.toString() : S;
+        //return sb.length() <= S.length() ? sb.toString() : S;
+        //return "";
     }
 
 
