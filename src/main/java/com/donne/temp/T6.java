@@ -23,4 +23,21 @@ public class T6 {
             System.out.println(iterator.next());
         }
     }
+
+
+}
+
+class Solution {
+    public int[] finalPrices(int[] prices) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(0);
+        for (int i = 1; i < prices.length; i++) {
+            while (!stack.isEmpty() && prices[i] <= prices[stack.peek()]) {
+                int index = stack.pop();
+                prices[index] = prices[index] - prices[i];
+            }
+            stack.push(i);
+        }
+        return prices;
+    }
 }

@@ -31,7 +31,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Main {
 
-    private static Object lock = new Object();
+    private final static Object lock = new Object();
     private static int times = 15;
     private static volatile int tag = 1;
 
