@@ -1,7 +1,31 @@
 package com.donne.temp;
 
+import com.donne.jvm.T;
+import io.netty.util.concurrent.DefaultThreadFactory;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
 public class QxcWinSolution {
-    public static void main(String[] args) {
+
+    static ExecutorService executorService = Executors.newSingleThreadExecutor(new DefaultThreadFactory("AAAAAA"));
+
+    public static void main(String[] args) throws InterruptedException {
+//        Thread thread = new Thread(() -> {
+//            System.out.println("线程执行：" + Thread.currentThread().getState().toString());
+//        });
+//        thread.start();
+
+        executorService.execute(() -> {
+            System.out.println("线程执行：" + Thread.currentThread().getState().toString());
+        });
+
+        TimeUnit.SECONDS.sleep(200);
+
+        //System.out.println(thread.getState().toString());
+
+
         // write your code here
         int[] numbers = new int[]{5, 3, 2, 4, 2, 3, 2};
         int[] hits = new int[]{1, 1, 1, 1, 1, 1, 0};
