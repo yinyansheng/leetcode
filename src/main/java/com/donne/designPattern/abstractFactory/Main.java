@@ -7,5 +7,11 @@ public class Main {
         blackHuman.color();
         blackHuman.gender();
         blackHuman.say();
+
+        HumanFactory humanFactory2 = new MaleHumanFactory();
+        Human human2 = humanFactory2.createYellowHuman();
+        human2.color();
+        human2.gender();
+        human2.say();
     }
 }
