@@ -38,7 +38,7 @@ public class ConsumerAndProviderDemo2 {
                 System.out.println(Thread.currentThread().getName() + "仓库为空");
                 emptyCondition.await();
             }
-            
+
             list.remove(0);
             System.out.println(Thread.currentThread().getName() + "消费一个,size:" + list.size());
             fullCondition.signalAll();
